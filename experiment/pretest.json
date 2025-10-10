@@ -1,39 +1,54 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[ 
+	{
+		"question": "What is the primary goal of contingency analysis in power systems?",
+		"answers": {
+			"a": "To maximize power generation",
+			"b": "To identify the critical contingencies",
+			"c": "To reduce the cost of electricity",
+			"d": "To increase line resistance"
+		},
+		"correctAnswer": "b"
+	},
+	{
+		"question": "In power system contingency analysis, what does N-1 contingency refer to?",
+		"answers": {
+			"a": "Loss of any one generator or transmission line",
+			"b": "Failure of the entire power system",
+			"c": "Loss of two or more elements",
+			"d": "Increase in generation capacity"
+		},
+		"correctAnswer": "a"
+	},
+	{
+		"question": "When a generator outage occurs, how is the lost generation typically managed?",
+		"answers": {
+			"a": "Increasing load demand",
+			"b": "Reducing transmission losses",
+			"c": "Redistributing outage generation among remaining generators",
+			"d": "Turning off all loads"
+		},
+		"correctAnswer": "c"
+	},
+	{
+		"question": "Which is not true when a transmission line outage occurs?",
+		"answers": {
+			"a": "Voltage increases in the affected area ",
+			"b": "Power flow is redistributed over the remaining network",
+			"c": "Load demand increases automatically",
+			"d": "Additional generators are shut down "
+		},
+		"correctAnswer": "c"
+	},
+	{
+		"question": "Which of the following can be an effect of a generator outage?",
+		"answers": {
+			"a": "Decrease in system inertia",
+			"b": "Decrease in system frequency",
+			"c": "Increase in power losses",
+			"d": "All of the above"
+		},
+		"correctAnswer": "d"
+	}
+]
+
+  
