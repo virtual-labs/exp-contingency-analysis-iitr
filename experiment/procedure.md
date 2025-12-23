@@ -1,6 +1,6 @@
 <div style="font-family: 'Nunito Sans', sans-serif; font-size: 20px;text-align: justify;">
 
-## Procedure for Contingency Analysis -  
+### Procedure for Contingency Analysis -  
 
 <b>STEP 1</b>: Enter the number of buses in a power system. Then, click on the "Generate Bus Table" and fill the details of buses i.e., Bus Type (Slack Bus = 1, PV Bus = 2, PQ Bus = 3), Voltage magnitude (pu), Angle (degree) , Pgen (pu), Pload (pu).
 <br>
