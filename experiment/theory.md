@@ -1,8 +1,8 @@
 
 <div style="font-family: 'Nunito Sans', sans-serif; font-size: 20px;text-align: justify;">
-<h2>Introduction</h2>
+<h3>Introduction</h3>
 
-Contingency analysis is an essential study in power system planning and operations to identify the potential failures in the system and assesses their impact on system stability, reliability, and security. It ensures the power system performance under the transmission line and generator outage conditions. Line outages consider studying the system behavior when a transmission line is out of service, while generator outages consider studying how the system responds when a generator is out of service. 
+Contingency analysis is an essential study in power system planning and operations to identify the potential failures in the system and assess their impact on system stability, reliability, and security. It ensures the power system performance under the transmission line and generator outage conditions. Line outages consider studying the system behavior when a transmission line is out of service, while generator outages consider studying how the system responds when a generator is out of service. 
 
 <b><u>Line Outage Contingency Analysis  </u>:</b> 
 
@@ -20,9 +20,9 @@ The following steps are performed for the line outage contingency analysis -
 
 <b><u>Generator Outage Contingency Analysis  </u>:</b> 
 
-When a generator is lost, power generation of lost generator is redistributed in the remaining generator. For the redistributing of the lost power generation among the remaining generators, the concept of proportional load sharing is utilized. Based on this principle, the power generation of the remaining generator can be calculated as follows - 
+When a generator is lost, power generation of lost generator is redistributed among the remaining generator. For the redistributing of the lost power generation among the remaining generators, the concept of proportional load sharing is utilized. Based on this principle, the power generation of the remaining generator can be calculated as follows - 
  
-<img src="images/Formula.png">
+<center><img src="images/Formula.png" style=" height: 80px; width: 430px;" align="center"></center><br>
 
 
 The redispatched power generation affects the power flow of the transmission lines. This may cause power flow shifts, leading to possible overloading of lines. For performing the generator outage contingency analysis, DC power flow method is utilized for simplicity.  
