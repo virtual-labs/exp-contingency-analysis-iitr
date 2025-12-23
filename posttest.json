@@ -1,0 +1,52 @@
+[
+	{
+		"question": "Which matrix is modified and analyzed for line outage contingency analysis in DC power flow method?",
+		"answers": {
+			"a": "Impedance matrix",
+			"b": "B-Bus (Susceptance) matrix",
+			"c": "Frequency Response matrix",
+			"d": "Voltage Control matrix"
+		},
+		"correctAnswer": "b"
+	},
+	{
+		"question": "If a heavily loaded line trips, what is the most likely impact?",
+		"answers": {
+			"a": "Increase in system efficiency",
+			"b": "Overloading of remaining transmission lines",
+			"c": "Increase in system inertia",
+			"d": "Decrease in system frequency "
+		},
+		"correctAnswer": "b"
+	},
+	{
+		"question": "Which method is commonly used to analyze the effect of line outages?",
+		"answers": {
+			"a": "DC Power Flow Analysis",
+			"b": "Fourier Transform Analysis",
+			"c": "Electromagnetic Induction Analysis",
+			"d": "Harmonic Distortion Analysis"
+		},
+		"correctAnswer": "a"
+	},
+	{
+		"question": "Which of the following is NOT a contingency control action in power systems?",
+		"answers": {
+			"a": "Load Shedding",
+			"b": "Generator Re-dispatch",
+			"c": "Increasing the resistance of transmission lines",
+			"d": "Using FACTS devices for reactive power compensation"
+		},
+		"correctAnswer": "c"
+	},
+	{
+		"question": "In contingency analysis, what does a secure power system mean?",
+		"answers": {
+			"a": "The system can handle any one of the outages without exceeding operational limits",
+			"b": "The system has minimum generation cost",
+			"c": "The system operates with a single generator",
+			"d": "The system has zero transmission losses"
+		},
+		"correctAnswer": "a"
+	}
+]

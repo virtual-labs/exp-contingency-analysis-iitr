@@ -1,0 +1,1 @@
+#### The aim of this lab experiment is to understand, perform and analyze a given power system network for the line and generator contingencies using the DC power flow method.

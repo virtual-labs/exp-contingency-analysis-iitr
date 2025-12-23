@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contingency Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contingency Analysis</h1>
+        <button id="openInstructions">Instructions</button>
+        
+        <div class="flex-container">
+            <!-- Column 1: Bus Data and Line Data -->
+            <div class="column">
+                <h2>Bus Data</h2>
+                <div class="input-row">
+                    <label for="numBuses">Enter the number of buses:</label>
+                    <input type="number" id="numBuses">
+                </div>
+                <div class="button-group">
+                    <button onclick="generateBusTable()">Generate Bus Table</button>
+                    <button onclick="autofillFiveBusNetwork()" class="button-secondary">Autofill Bus Data: IEEE 5-Bus</button>
+                    <button onclick="autofillFourteenBusNetwork()" class="button-secondary">Autofill Bus Data: IEEE 14-Bus</button>
+                </div>
+                <div id="busTableContainer" class="table-responsive"></div>
+
+                <h2>Line Data</h2>
+                <div class="input-row">
+                    <label for="numLines">Enter the number of lines:</label>
+                    <input type="number" id="numLines">
+                </div>
+                <div class="button-group">
+                    <button onclick="generateLineTable()">Generate Line Table</button>
+                    <button onclick="autofillSixLines()" class="button-secondary">Autofill Line Data: IEEE 5-Bus</button>
+                    <button onclick="autofillTwentyLines()" class="button-secondary">Autofill Line Data: IEEE 14-Bus</button>
+                </div>
+                <div id="lineTableContainer" class="table-responsive"></div>
+            </div>
+
+            <!-- Column 2: B Matrix and Results -->
+            <div class="column">
+                <h2>B Matrix: Base Case (Without Line Outages)</h2>
+                <div class="button-group">
+                    <button onclick="calculateYbus()">Calculate B-Bus Matrix for DC (Linear) Power Flow</button>
+                </div>
+                <div id="ybusContainer" class="table-responsive"></div>
+                <hr>
+                <h2>Results: Base Case</h2>
+                <div class="button-group">
+                    <button onclick="runLoadFlow()">Run DC (Linear) Power Flow: Base Case</button>
+                </div>
+                <div id="loadFlowResults" class="table-responsive"></div>
+            </div>
+        </div>
+
+        <!-- Full Width Contingency Analysis Section -->
+        <div class="full-width-section">
+            <hr>
+            <h2>Contingency Analysis</h2>
+            <div class="button-group">
+                <button onclick="runContingencyAnalysis()">Run Contingency Analysis: Line Outages</button>
+                <button onclick="runGeneratorOutageContingency()" class="button-secondary">Run Contingency Analysis: Generator Outage</button>
+            </div>
+            <div id="bbusContainer" class="table-responsive"></div>
+        </div>
+
+        <footer>&copy; 2025 Virtual Labs | IIT Roorkee</footer>
+    </div>
+
+    <div id="instructionsModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <p>
+                <b>STEP 1</b>: Enter the number of buses in a power system. Then, click on the <b>"Generate Bus Table"</b> and fill in the bus details:
+                Bus Type (Slack Bus = 1, PV Bus = 2, PQ Bus = 3), Voltage magnitude (pu), Angle (degree), Pgen (pu), and Pload (pu).  
+                <br><b>Note:</b> Bus data for two standard IEEE bus systems are provided — (I) IEEE 5-Bus and (II) IEEE 14-Bus. Use <b>"Autofill Bus Data"</b> buttons to load sample data.
+                <br><br>
+
+                <b>STEP 2</b>: Enter the number of lines in a power system. Then, click on the <b>"Generate Line Table"</b> and fill in:
+                From Bus, To Bus, X (pu), Line Limit (pu).  
+                <br><b>Note:</b> Line data for IEEE 5-Bus and IEEE 14-Bus systems are also available through the <b>"Autofill Line Data"</b> buttons.
+                <br><br>
+
+                <b>STEP 3</b>: Click on <b>"Calculate B-Bus Matrix for DC (Linear) Power Flow"</b> to display the B-Bus matrix values.
+                <br><br>
+
+                <b>STEP 4</b>: Click on <b>"Run DC (Linear) Power Flow: Base Case"</b> to display bus voltage, angle, generation, load, and line flow data.
+                <br><br>
+
+                <b>STEP 5</b>: Click on <b>"Run Contingency Analysis: Line Outages"</b> to analyze line outage effects. Overloaded transmission lines will appear in red.
+                <br><br>
+
+                <b>STEP 6</b>: Click on <b>"Run Contingency Analysis: Generator Outage"</b> to analyze generator outage effects. Results for bus voltage angle, generator output, and line flows will be displayed, with overloaded lines highlighted in red.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.js"></script>
+    <script>
+        // Instructions Modal Script
+        const modal = document.getElementById("instructionsModal");
+        const btn = document.getElementById("openInstructions");
+        const span = document.getElementById("closeModal");
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        };
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Placeholder functions - replace with your actual script.js functions
+        function generateBusTable() { console.log("Generate Bus Table"); }
+        function autofillFiveBusNetwork() { console.log("Autofill 5-Bus"); }
+        function autofillFourteenBusNetwork() { console.log("Autofill 14-Bus"); }
+        function generateLineTable() { console.log("Generate Line Table"); }
+        function autofillSixLines() { console.log("Autofill 6 Lines"); }
+        function autofillTwentyLines() { console.log("Autofill 20 Lines"); }
+        function calculateYbus() { console.log("Calculate Ybus"); }
+        function runLoadFlow() { console.log("Run Load Flow"); }
+        function runContingencyAnalysis() { console.log("Run Contingency Analysis"); }
+        function runGeneratorOutageContingency() { console.log("Run Generator Outage"); }
+    </script>
+    <script src="script.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>
